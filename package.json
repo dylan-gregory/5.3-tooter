@@ -66,5 +66,8 @@
       ".hbs",
       "json"
     ]
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
   }
 }
