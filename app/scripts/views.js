@@ -14,9 +14,10 @@ function PostView(){
 
   $('.form').on('submit', function(event){
     event.preventDefault();
+
     $(document).trigger('create:post', [{
-      title: 'Cool',
-      body: 'Cool'
+      title: $('.form-title').val(),
+      body: $('.form-body').val()
     }]);
 
   });

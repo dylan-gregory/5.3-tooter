@@ -17,6 +17,17 @@ Post.fetch = function(){
   return promise;
 };
 
+Post.create = function(data){
+  $.ajax({
+      method: "POST",
+      dataType: "json",
+      url: "http://tiny-lasagna-server.herokuapp.com/collections/posts",
+      data: data
+    }).done(function(){
+      Post.fetch();
+    });
+  };
+
 
 module.exports = {
   'Post': Post

@@ -29,6 +29,20 @@ describe('Post', function(){
     });
   });
 
+
+  describe('create', function(){
+    it('should send a POST request', function(){
+        Post.create();
+    });
+
+    it('should resolve with a created post, including an _id', function(){
+
+
+    });
+
+
+  })
+
 });
 
 // ##############################################

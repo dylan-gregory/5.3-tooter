@@ -8,16 +8,13 @@ $(function(){
 
   $(document).on('posts:fetch', function(event, posts){
     view.showPosts(posts);
+    console.log(posts);
   });
 
   models.Post.fetch();
 
-  // $('.form').on('submit', function(event){
-  //   event.preventDefault();
-  //   $(document).trigger('create:post', [{
-  //     title: 'Cool',
-  //     body: 'Cool'
-  //   }]);
-  // });
-  //
+  $(document).on('create:post', function(event, data){
+    models.Post.create(data);
+  });
+
 });
