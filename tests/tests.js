@@ -73,22 +73,33 @@ describe('PostView', function(){
 
 
 
-describe('create post form', function(){
+describe('create post form', function(){ // the high level of what you're testing
 
+
+      // the smaller piece of what you're testing
   it('should trigger a create:post event on the document with the title and body', function(done){
 
+
     $(document).on('create:post', function(event, post){
+      // event.preventDefault(); if necessary
 
       expect(post).to.have.property('title');
       expect(post).to.have.property('body');
+
+      expect(post.title).to.equal('Title');
+      expect(post.body).to.equal('Body');
+
 
       done();
 
 
     });
+    // with TDD, you have to imagine/envision what your code will look like at this point, as well as class names\
+    // this is just your test suite acting out the form being filled and submitted
+
         $('.form-title').val('Title');
         $('.form-body').val('Body');
-        $('.form-button').click();
+        $('.form-button').click(); // could choose the form itself and use the submit(), just more accurate
 
 
   });
