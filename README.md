@@ -4,7 +4,6 @@ The functionality and appearance of this little blog post machine wasn't the act
 
 ## Built With
 
-
 * [jQuery](https://jquery.com/)
 * [Mocha](https://mochajs.org/)
 * [Chai](http://chaijs.com/)
